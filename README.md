@@ -9,7 +9,7 @@ TokenUtils接口类中添加了signatureToken、generateToken用以解析、生�
 
 TokenUtils可配置项：
 在配置文件properties或者yml中配置：
-token：
+token: 
   header: token
   ignore: /url
 header为token得请求头，可配置自定义，也可不配置，则默认为token
