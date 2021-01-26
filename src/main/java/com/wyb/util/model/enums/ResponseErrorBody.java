@@ -10,7 +10,7 @@ public class ResponseErrorBody {
 
 	private String message;
 
-	public ResponseErrorBody(int error, String message) {
+	private ResponseErrorBody(int error, String message) {
 		this.error = error;
 		this.message = message;
 	}
