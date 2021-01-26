@@ -1,0 +1,16 @@
+本工具旨在建立一些java开发中常用但是比较繁琐的工具
+
+工具1：token的建立与验证
+
+使用TokenUtils工具接口用以验证及建立token
+TokenUtils接口类中添加了signatureToken、generateToken用以解析、生成token，如果需要自行解析可以实例化TokenUtils接口
+使用@TokenVerification注解用以将指定类下的方法或指定接口进行token验证，如果该注解写在controller类之外的类或方法将无效。
+添加注解后必须有指定的token才可以访问该类下的接口或指定方法。
+
+TokenUtils可配置项：
+在配置文件properties或者yml中配置：
+token: 
+  header: token
+  ignore: /url
+header为token得请求头，可配置自定义，也可不配置，则默认为token
+ignore为忽略地址，配置后，请求相应地址得接口则不会进行token验证
