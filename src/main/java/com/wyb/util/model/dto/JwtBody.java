@@ -12,7 +12,6 @@ import java.util.Objects;
  *
  * @author wyb
  */
-@Data
 public class JwtBody {
 
 	private String subject;
@@ -26,5 +25,29 @@ public class JwtBody {
 			map.remove("sub");
 			this.object = map.get("data");
 		}
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public Object getObject() {
+		return object;
+	}
+
+	public void setObject(Object object) {
+		this.object = object;
+	}
+
+	@Override
+	public String toString() {
+		return "JwtBody{" +
+				"subject='" + subject + '\'' +
+				", object=" + object +
+				'}';
 	}
 }
